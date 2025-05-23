@@ -9,33 +9,206 @@
         :root {
             --primary-color: #2c3e50;
             --secondary-color: #3498db;
-            --accent-color: #e74c3c;
+            --accent-color: #0378cc;
             --text-color: #333;
             --light-gray: #f5f5f5;
             --medium-gray: #ddd;
             --dark-gray: #777;
         }
-        
-        *{
+
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
-        body{
-            font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--light-gray);
             padding: 20px;
         }
 
-        .container{
+        .container {
             max-width: 210mm;
             min-height: 297mm;
             margin: 0 auto;
             background: white;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styles */
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        header h2 {
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        /* Main Layout */
+        .cv-main {
+            display: flex;
+            flex: 1;
+        }
+
+        .cv-sidebar {
+            width: 35%;
+            padding: 20px;
+            background-color: var(--light-gray);
+        }
+
+        .cv-content {
+            width: 65%;
+            padding: 20px 30px;
+        }
+
+        /* Sidebar Styles */
+        address {
+            margin-bottom: 25px;
+            font-style: normal;
+        }
+
+        address p {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        address i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+            width: 16px;
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 18px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--medium-gray);
+        }
+
+        .education p {
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .skills-column h4 {
+            color: var(--accent-color);
+            margin: 15px 0 10px;
+            font-size: 16px;
+        }
+
+        .skill-list, .language-list {
+            list-style-type: none;
+        }
+
+        .skill-list li, .language-list li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .lang-level, .skill-level {
+            color: var(--dark-gray);
+            font-weight: 500;
+        }
+
+        .language-list li {
+            margin-bottom: 8px;
+        }
+
+        /* Content Styles */
+        .cv-content p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .job-column {
+            margin-bottom: 25px;
+        }
+
+        .job-column h4 {
+            color: var(--primary-color);
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .job-column ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .job-column li {
+            margin-bottom: 5px;
+        }
+
+        .job-column h5 {
+            color: var(--secondary-color);
+            margin: 10px 0 5px;
+            font-size: 15px;
+        }
+
+        .hobby ul {
+            list-style-type: none;
+            columns: 2;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+                font-size: 12pt;
+            }
+
+            .container {
+                box-shadow: none;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            header {
+                padding: 15px 20px;
+            }
+
+            .cv-sidebar, .cv-content {
+                padding: 15px;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .cv-main {
+                flex-direction: column;
+            }
+            
+            .cv-sidebar, .cv-content {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -48,19 +221,19 @@
         <div class="cv-main">
             <aside class="cv-sidebar">
                 <address>
-                        <p>Jelenia Góra, 58-506<br> Dolny Śląsk</p>
-                        <p>Noskowskiego 9/134</p>
-                        <p>Telefon: +48 882 128 417</p>
-                        <p>Email: figulatymoteusz5@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Jelenia Góra, 58-506<br>Dolny Śląsk</p>
+                    <p><i class="fas fa-home"></i> Noskowskiego 9/134</p>
+                    <p><i class="fas fa-phone"></i> +48 882 128 417</p>
+                    <p><i class="fas fa-envelope"></i> figulatymoteusz5@gmail.com</p>
                 </address>
                 <section class="education">
                     <h3>Edukacja</h3>
-                    <p>Politechnika Wroclawska Informatyka Techniczna <br>2022-2024</p>
-                    <p>Publiczne Katolickie Liceum Akademickie u św. Pankracego w Jeleniej Górze mat-fiz-inf 2019-2022</p>
-            </section>
+                    <p><strong>Politechnika Wroclawska</strong><br> Informatyka Techniczna<br>2022-2024</p>
+                    <p><strong>Publiczne Katolickie Liceum Akademickie</strong><br> u św. Pankracego w Jeleniej Górze mat-fiz-inf<br>2019-2022</p>
+                </section>
                 <section class="skills">
                     <h3>Umiejętności</h3>
-                    <div class="skils-column">
+                    <div class="skills-column">
                         <h4>Techniczne</h4>
                         <ul class="skill-list">
                             <li>HTML <span class="skill-level">Podstawowy</span></li>
@@ -69,12 +242,8 @@
                         </ul>
                         <h4>Językowe</h4>
                         <ul class="language-list">
-                            <li>
-                                Polski(ojczysty)
-                            </li>
-                            <li>
-                                Angielski (C1)
-                            </li>
+                            <li>Polski <span class="lang-level">Ojczysty</span></li>
+                            <li>Angielski <span class="lang-level">C1/B2</span></li>
                         </ul>
                     </div>
                 </section>
@@ -92,12 +261,8 @@
                     <div class="job-column">
                         <h4>Żabka</h4>
                         <ul>
-                            <li>
-                                2023-2024
-                            </li>
-                            <li>
-                                2025-obecnie
-                            </li>
+                            <li>2023-2024</li>
+                            <li>2025-obecnie</li>
                         </ul>
                         <h5>Obowiązki</h5>
                         <ul>
@@ -106,16 +271,15 @@
                             <li>Przyjmowanie dostaw</li>
                             <li>Obsługiwanie strefy gastro</li>
                         </ul>
-
                     </div>
                 </section>
-            
                 <section class="hobby">
                     <h3>Zainteresowania</h3>
                     <ul>
                         <li>Programowanie</li>
                         <li>Strzelectwo sportowe</li>
                         <li>Gry strategiczne</li>
+                        <li>Power Lifting</li>
                     </ul>
                 </section>
             </main>

@@ -4,24 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tymoteusz Figuła - Curriculum vitae</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-gray: #f5f5f5;
+            --medium-gray: #ddd;
+            --dark-gray: #777;
+        }
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body{
+            font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-gray);
+            padding: 20px;
+        }
+
+        .container{
+            max-width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
+    <div class="container">
+        <header>
             <h1>Tymoteusz Figuła</h1>
             <h2>Junior Web Developer</h2>
-            <address>
-                <p>Jelenia Góra, 58-506</p>
-                <p>Noskowskiego 9/134</p>
-                <p>Telefon: <a href="tel:phone number">+48 882 128 417</a></p>
-            </address>
-        </div>
-    </header>
-    <div class="container">
+        </header>
+        <div class="cv-main">
+            <aside class="cv-sidebar">
+                <address>
+                        <p>Jelenia Góra, 58-506<br> Dolny Śląsk</p>
+                        <p>Noskowskiego 9/134</p>
+                        <p>Telefon: +48 882 128 417</p>
+                        <p>Email: figulatymoteusz5@gmail.com</p>
+                </address>
+                <section class="education">
+                    <h3>Edukacja</h3>
+                    <p>Politechnika Wroclawska Informatyka Techniczna <br>2022-2024</p>
+                    <p>Publiczne Katolickie Liceum Akademickie u św. Pankracego w Jeleniej Górze mat-fiz-inf 2019-2022</p>
+            </section>
+                <section class="skills">
+                    <h3>Umiejętności</h3>
+                    <div class="skils-column">
+                        <h4>Techniczne</h4>
+                        <ul class="skill-list">
+                            <li>HTML <span class="skill-level">Podstawowy</span></li>
+                            <li>CSS <span class="skill-level">Podstawowy</span></li>
+                            <li>JavaScript <span class="skill-level">Podstawowy</span></li>
+                        </ul>
+                        <h4>Językowe</h4>
+                        <ul class="language-list">
+                            <li>
+                                Polski(ojczysty)
+                            </li>
+                            <li>
+                                Angielski (C1)
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </aside>
+            <main class="cv-content">
+                <h3>Podsumowanie</h3>
+                <p>Początkujący programista stron internetowych z wiedzą podstawową z HTML, CSS i JavaScript. 
+                Pasjonat tworzenia czystego, semantycznego kodu. 
+                Szczególnie zainteresowany rozwojem w kierunku platformy ServiceNow, łączącej możliwości rozwoju webowego 
+                z rozwiązaniami biznesowymi. W trakcie intensywnej nauki poprzez kursy online i projekty praktyczne. 
+                Poszukuję możliwości rozwoju w dynamicznym środowisku IT, gdzie mógłbym zastosować zdobytą wiedzę 
+                i rozwijać nowe umiejętności.</p>
+                <section class="previous-employment">
+                    <h3>Doświadczenie Zawodowe</h3>
+                    <div class="job-column">
+                        <h4>Żabka</h4>
+                        <ul>
+                            <li>
+                                2023-2024
+                            </li>
+                            <li>
+                                2025-obecnie
+                            </li>
+                        </ul>
+                        <h5>Obowiązki</h5>
+                        <ul>
+                            <li>Obsługa Klienta</li>
+                            <li>Zatowarowanie sklepu</li>
+                            <li>Przyjmowanie dostaw</li>
+                            <li>Obsługiwanie strefy gastro</li>
+                        </ul>
 
+                    </div>
+                </section>
+            
+                <section class="hobby">
+                    <h3>Zainteresowania</h3>
+                    <ul>
+                        <li>Programowanie</li>
+                        <li>Strzelectwo sportowe</li>
+                        <li>Gry strategiczne</li>
+                    </ul>
+                </section>
+            </main>
+        </div>
     </div>
+    <footer>
+
+    </footer>
     
 </body>
 </html>
